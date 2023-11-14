@@ -4,15 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 10</title>
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
-    <select class="breed-select"></select>
+    <div class="select-wrapper">
+      <select class="breed-select is-hidden"></select>
+      <svg class="icon" width="20" height="20">
+        <use href="./img/symbol-defs.svg#icon-down-arrow-multimedia-option-svgrepo-com"></use>
+      </svg>
+    </div>
+    
     <p class="loader">Loading data, please wait...</p>
-    <p class="error">Oops! Something went wrong! Try reloading the page!</p>
-    <div class="cat-info"></div>
+    <p class="error is-hidden">Oops! Something went wrong! Try reloading the page!</p>
+    <div class="cat-info is-hidden"></div>
 
     <script src="./JS/index.js" type="module"></script>
-    <script type="module" src="./JS/cat-api.js"></script>
-    <script type="module" src="./JS/template.js"></script>
   </body>
 </html>

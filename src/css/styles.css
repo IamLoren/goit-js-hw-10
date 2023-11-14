@@ -1,0 +1,115 @@
+body {
+    padding-top: 50px;
+}
+
+select {
+    width: 300px;
+    height: 50px;
+    border: 3px solid orange;
+    border-radius: 10px;
+    outline: 3px solid orange;
+    padding-left: 20px; 
+    margin-left: 50px;
+    color: orange;
+    font-size: 20px;
+    font-weight: 700;
+    appearance: none;
+    cursor: pointer;
+}
+
+option {
+  font-size: 20px;
+  font-weight: 500;
+  color: orange;
+}
+
+.select-wrapper {
+    position: relative;
+    width: fit-content;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    fill: orange;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.rotate {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+  
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+.cat-info {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid orange;
+    border-radius: 10px;
+}
+
+.img-wrapper {
+    width: 500px;
+    height: fit-content;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.cat-img {
+    width: 100%;
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.cat-info:hover .cat-img {
+    transform: scale(1);
+}
+
+.cat-breed {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.cat-description {
+    text-indent: 30px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+span {
+    font-weight: 700;
+}
+
+.loader,
+.error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(15, 97, 15);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.error {
+    color: red;
+}
