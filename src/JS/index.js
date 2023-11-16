@@ -11,6 +11,7 @@ fetchBreeds()
   .then(res => {
     select.classList.remove('is-hidden');
     const fragment = createOptions(res);
+    select.insertAdjacentHTML('beforeend', `<option>Select a cat breed<option/>`)
     select.appendChild(fragment);
   })
   .catch(err => {
@@ -21,11 +22,7 @@ fetchBreeds()
     loader.classList.add('is-hidden');  
   });
 
-
-select.addEventListener('click', () => {
-    arrow.classList.toggle('rotate');
-    arrow.classList.toggle('up');
-    if (!arrow.classList.contains('up')) {
+select.addEventListener('change', () => {
         loader.classList.remove('is-hidden');
         catCard.classList.add('is-hidden');
         const choiseOfCat = select.value;
@@ -42,5 +39,4 @@ select.addEventListener('click', () => {
     .finally(() => {
         loader.classList.add('is-hidden');
     });
-    }
 })
